@@ -1,6 +1,7 @@
 # OmniAuth Lightspeed Strategy
 
 An OmniAuth Lightspeed Strategy. Does what it says on the box.
+Forked from the the tragically deceased https://github.com/radar/omniauth-lightspeed
 
 ## Usage
 
