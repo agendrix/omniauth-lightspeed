@@ -1,42 +1,21 @@
-# -*- encoding: utf-8 -*-
-# stub: omniauth-lightspeed 1.0.0 ruby lib
+require File.expand_path('../lib/omniauth/lightspeed/version', __FILE__)
 
-Gem::Specification.new do |s|
-  s.name = "omniauth-lightspeed"
-  s.version = "1.0.0"
+Gem::Specification.new do |gem|
+  gem.authors       = ["Mathieu Allaire", "Mathieu Blanchette", "Ryan Bigg"]
+  gem.email         = ["dev@agendrix.com"]
+  gem.description   = "OmniAuth strategy for Lightspeed Retail."
+  gem.summary       = "OmniAuth strategy for Lightspeed Retail."
+  gem.homepage      = "https://github.com/agendrix/omniauth-lightspeed"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.require_paths = ["lib"]
-  s.authors = ["Ryan Bigg"]
-  s.date = "2016-11-21"
-  s.description = "OmniAuth strategy for Lightspeed."
-  s.email = ["git@ryanbigg.com"]
-  s.files = [".gitignore", ".rspec", ".travis.yml", "Gemfile", "README.md", "Rakefile", "bin/console", "bin/setup", "lib/omniauth/lightspeed.rb", "lib/omniauth/lightspeed/strategy.rb", "lib/omniauth/lightspeed/version.rb", "omniauth-lightspeed.gemspec"]
-  s.homepage = "https://github.com/radar/omniauth-lightspeed"
-  s.rubygems_version = "2.5.1"
-  s.summary = "OmniAuth strategy for Lightspeed."
+  gem.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
+  gem.files         = `git ls-files`.split("\n")
+  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.name          = 'omniauth-lightspeed'
+  gem.require_paths = ["lib"]
+  gem.version       = Omniauth::Lightspeed::VERSION
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
+  gem.add_dependency "omniauth", "~> 1"
+  gem.add_dependency "omniauth-oauth2", "~> 1"
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<omniauth-oauth2>, [">= 0"])
-      s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.10"])
-      s.add_development_dependency(%q<rake>, ["~> 10.0"])
-      s.add_development_dependency(%q<rspec>, [">= 0"])
-    else
-      s.add_dependency(%q<omniauth-oauth2>, [">= 0"])
-      s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<bundler>, ["~> 1.10"])
-      s.add_dependency(%q<rake>, ["~> 10.0"])
-      s.add_dependency(%q<rspec>, [">= 0"])
-    end
-  else
-    s.add_dependency(%q<omniauth-oauth2>, [">= 0"])
-    s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<bundler>, ["~> 1.10"])
-    s.add_dependency(%q<rake>, ["~> 10.0"])
-    s.add_dependency(%q<rspec>, [">= 0"])
-  end
+  gem.add_development_dependency "rspec", ">= 0"
 end
