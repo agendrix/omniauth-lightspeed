@@ -14,8 +14,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Omniauth::Lightspeed::VERSION
 
-  gem.add_dependency "omniauth", "~> 1"
-  gem.add_dependency "omniauth-oauth2", "~> 1"
+  gem.add_dependency "omniauth-oauth2"
 
   gem.add_development_dependency "rspec", ">= 0"
 end
