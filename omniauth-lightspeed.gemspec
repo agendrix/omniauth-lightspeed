@@ -6,6 +6,7 @@ Gem::Specification.new do |gem|
   gem.description   = "OmniAuth strategy for Lightspeed Retail."
   gem.summary       = "OmniAuth strategy for Lightspeed Retail."
   gem.homepage      = "https://github.com/agendrix/omniauth-lightspeed"
+  gem.licenses      = ["MIT"]
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
